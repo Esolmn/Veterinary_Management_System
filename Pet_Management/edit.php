@@ -95,7 +95,7 @@
             
             <div class="row">
                 <div class="col-6">
-                    <button type="submit" class="btn btn-warning w-100 rounded-3">Update Pet</button>
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3">Update Pet</button>
                 </div>
                 <div class="col-6">
                     <a type="button" class="btn btn-danger w-100 rounded-3" name="sub" href="index.php">Cancel</a>

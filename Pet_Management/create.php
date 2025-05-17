@@ -92,7 +92,7 @@
             
             <div class="row">
                 <div class="col-6">
-                    <button type="submit" class="btn btn-warning w-100 rounded-3">Add Pet</button>
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3">Add Pet</button>
                 </div>
                 <div class="col-6">
                     <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'pet_owner'): ?>

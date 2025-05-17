@@ -14,10 +14,9 @@
             //display website
 ?>
 
-<div class="container-xxl p-4 shadow rounded-5">
-    <div class="row">
-        <!-- Form Section -->
-        <div class="col-md-4">
+<div class="container-xxl p-4 mt-3 d-flex justify-content-center">
+    <div class="row g-4" style="min-height: 75%;">
+        <div class="col-md-4 d-flex h-75">
             <div class="card shadow rounded-4 p-4">
                 <div class="card-title text-center">
                     <h1>
@@ -27,7 +26,7 @@
                     </h1>
                     <h2 class="fw-bold mt-3 text-primary">CREATE TREATMENT</h2>
                 </div>
-                <form action="store.php" method="POST" class="mt-4">
+                <form action="store.php" method="POST" class="mt-1">
                     <div class="row mb-3">
                         <div class="col-md-12">
                             <label for="treatment_name" class="form-label">Treatment Name</label>
@@ -68,17 +67,16 @@
                         </div>
                     </div>
                     <div class="d-grid">
-                        <div class="d-flex gap-2 mt-3">
+                        <div class="d-flex justify-content-between gap-2">
+                            <button type="submit" class="btn custom-purple-btn w-100 rounded-3">Create Treatment</button>
                             <a href="index.php" class="btn btn-danger w-100 rounded-3">Cancel</a>
-                            <button type="submit" class="btn btn-primary w-100 rounded-3">Create Treatment</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        <!-- Pets Table Section -->
-        <div class="col-md-8">
-            <div class="card shadow rounded-4 p-4">
+        <div class="col-md-8 d-flex">
+            <div class="card shadow rounded-4 p-4 h-75">
                 <div class="card-title text-center">
                     <h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="blue" class="bi bi-clipboard2-fill" viewBox="0 0 16 16">
@@ -86,9 +84,9 @@
                             <path d="M3.5 1h.585A1.5 1.5 0 0 0 4 1.5V2a1.5 1.5 0 0 0 1.5 1.5h5A1.5 1.5 0 0 0 12 2v-.5q-.001-.264-.085-.5h.585A1.5 1.5 0 0 1 14 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-12A1.5 1.5 0 0 1 3.5 1"/>
                         </svg>
                     </h1>
-                    <h2 class="fw-bold mt-3 text-primary">PETS REFERENCE</h2>
+                    <h2 class="fw-bold mt-3 text-primary">Pets Reference</h2>
                 </div>
-                <div class="table-responsive">
+                <div class="table-responsive" style="max-height: 700px; overflow-y: auto;">
                     <table id="vetTable" class="table table-striped">
                         <thead>
                             <tr>

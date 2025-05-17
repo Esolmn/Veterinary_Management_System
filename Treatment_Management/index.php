@@ -17,7 +17,7 @@
 <div class="container-xxl p-4 shadow rounded mt-4" style="background-color: white;"> 
     <h1 class="text-center" style="color: orange;">Manage Treatments</h1>
     <div class="mt-4 mb-4 d-flex justify-content-between">
-    <a class="btn btn-warning" href="create.php">Create Treatment</a>
+    <a class="btn custom-purple-btn" href="create.php">Create Treatment</a>
     </div>
     <!-- to apply the datatable downloaded need lagyan id and name ang table -->
     <table id="treatmentTable" class="table table-striped table-hover table-bordered">
