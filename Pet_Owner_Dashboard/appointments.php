@@ -21,8 +21,8 @@
     <div class="card shadow rounded-4 p-4">
         <p class="text-center fw-bold mt-2 fs-2" style="color: orange;">Appointment Status</p>
         <div class="mb-3 d-flex justify-content-between">
-            <a href="../Appointment_Management/create.php" class="btn custom-purple-btn rounded-3 mb-2 text-start">Schedule Appointment</a>
-            <a href="index.php" class="btn btn-danger rounded-3 mb-2 text-end">Back</a>
+            <a href="../Appointment_Management/create.php" class="btn custom-purple-btn rounded-3 mb-3 mt-3 text-start">Schedule Appointment</a>
+            <a href="index.php" class="btn btn-danger rounded-3 mb-3 mt-3 text-end">Back</a>
         </div>
         <div class="card shadow rounded-4 p-4 table-responsive w-100 overflow-auto">
             <table class="table table-hover align-middle fs-5">
@@ -34,6 +34,11 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
+                <?php if(empty($appointments)) : ?>
+                    <tr>
+                        <td colspan="3" class="text-center">No appointments found.</td>
+                    </tr>
+                <?php endif; ?>
                 <?php foreach ($appointments as $appt) : 
                     $petname = Pet::find($appt->pet_id);
                     $apptdate = AvailableDate::find($appt->aptdate_id);

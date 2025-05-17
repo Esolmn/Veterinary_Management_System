@@ -43,21 +43,6 @@ body {
     border-radius: 20px;
 }
 
-.content {
-    color: white;
-    font-size: 18px;
-}
-
-.content:hover {
-    color: rgb(255, 235, 20);
-}
-
-.content:active {
-    color: rgb(255, 235, 20);
-    font-weight: bold;
-    text-shadow: 1px 1px 2px black;
-}
-
 .navbar-nav {
     height: 100%;
 }
@@ -102,4 +87,42 @@ body {
 .table-container {
     max-height: 400px;
     overflow-y: auto;
+}
+
+.nav-link.active-link {
+    position: relative;
+    color: rgb(255, 235, 20);
+}
+
+@keyframes underlineGrow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.nav-link.active-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transform: scaleX(1);
+    transform-origin: left;
+    animation: underlineGrow 0.3s ease-out;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link.active-link {
+    color: rgb(255, 235, 20) !important;
+    font-weight: 700;
 }
