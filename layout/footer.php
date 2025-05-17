@@ -14,6 +14,7 @@ $(document).ready( function () {
     $('#petTable').DataTable();
     $('#table').DataTable();
     $('#treatmentTable1').DataTable();
+    $('#aptTable').DataTable(); 
     const table = $('#treatmentTable').DataTable({
         ordering: false, //inalis sorting
         dom: 't', //table lng papakita

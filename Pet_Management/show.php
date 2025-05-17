@@ -36,8 +36,9 @@
                 </div>
             </div>
             <div class="card shadow rounded-4 p-2 me-3 mt-2">
-                <div class="d-flex justify-content-center">
-                    <a class="btn btn-warning w-50 " href="../reports/pet_report.php?id=<?= $pet->id ?>">Generate PDF</a>
+                <div class="d-flex justify-content-between gap-3">
+                    <a class="btn custom-purple-btn w-50 rounded-3" href="../reports/pet_report.php?id=<?= $pet->id ?>">Generate PDF</a>
+                    <a class="btn btn-danger w-50 rounded-3" href="index.php">Back</a>
                 </div>
             </div>
         </div>
@@ -54,7 +55,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">Pet Name</th>
-                                <th class="text-center">Birthday</th>
+                                <th class="text-center">Birthdate</th>
                                 <th class="text-center">Breed</th>
                                 <th class="text-center">Specie</th>
                                 <th class="text-center">Gender</th>
