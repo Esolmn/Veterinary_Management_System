@@ -168,8 +168,8 @@
                     <?php else : ?>
                     <div class="row">
                         <div class="col-12 text-center">
+                            <button type="submit" class="btn custom-purple-btn">Book Appointment</button>
                             <a type="button" class="btn btn-danger" name="sub" href="index.php">Cancel</a>
-                            <button type="submit" class="btn btn-warning">Book Appointment</button>
                         </div>
                     </div>
                     <?php endif; ?>

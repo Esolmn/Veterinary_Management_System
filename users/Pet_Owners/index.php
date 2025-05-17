@@ -17,7 +17,7 @@
 <div class="container-xxl p-4 shadow rounded mt-5" style="background-color: white;"> 
     <h1 class="text-center" style="color: orange;">Pet Owners</h1>
     <div class="mt-4 mb-4 d-flex justify-content-between">
-    <a class="btn btn-warning" href="create.php">Create Account</a>
+    <a class="btn custom-purple-btn" href="create.php">Create Account</a>
         <div class="ml-auto">
             <a href="../../reports/pet_owner_report.php" target="_blank" class="btn btn-success">Users PDF</a>
         </div>
@@ -115,7 +115,7 @@
                             </a>
                         <?php endif; ?>
                         <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'superadmin' || $_SESSION['role'] == 'admin') {
-                            echo '<a class="btn btn-primary" onclick="
+                            echo '<a class="btn custom-purple-btn" onclick="
                                 Swal.fire({
                                     title: \'Manage Admin\',
                                     text: \'Do you want to reset password?\',

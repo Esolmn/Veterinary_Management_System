@@ -22,7 +22,7 @@
         <h1 class="text-center mt-4" style="color: orange;">Available Dates</h1>
     </div>
     <div class="mb-3 mt-2">
-        <a href="create.php" class="btn btn-warning">Add Available Date</a>
+        <a href="create.php" class="btn custom-purple-btn">Add Available Date</a>
     </div>
     <table class="table table-striped table-hover">
         <thead>

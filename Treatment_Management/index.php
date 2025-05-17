@@ -20,7 +20,7 @@
     <a class="btn custom-purple-btn" href="create.php">Create Treatment</a>
     </div>
     <!-- to apply the datatable downloaded need lagyan id and name ang table -->
-    <table id="treatmentTable" class="table table-striped table-hover table-bordered">
+    <table id="treatmentTable1" class="table table-striped table-hover table-bordered">
         <thead>
             <tr>
                 <th>#</th>

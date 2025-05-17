@@ -77,7 +77,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary w-100 rounded-3 mt-3">Create Account</button>
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3 mt-3">Create Account</button>
                 </div>
             </div>
             <div class="row">

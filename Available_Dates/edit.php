@@ -35,10 +35,10 @@
             </div>
             <div class="row mt-5">
                 <div class="col-6">
-                    <a href="index.php" class="btn btn-danger w-100 rounded-3 mt-3">Cancel</a>
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3 mt-3">Update</button>
                 </div>
                 <div class="col-6">
-                    <button type="submit" class="btn btn-primary w-100 rounded-3 mt-3">Update</button>
+                    <a href="index.php" class="btn btn-danger w-100 rounded-3 mt-3">Cancel</a>
                 </div>
             </div>
         </form>

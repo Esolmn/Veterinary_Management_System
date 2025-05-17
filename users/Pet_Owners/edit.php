@@ -23,11 +23,11 @@
 <div class="container-xxl d-flex justify-content-center align-items-center mt-5">
     <div class="card shadow rounded-4 p-4 mt-5" style="width: 700px;">
         <div class="card-title text-center">
-            <h1><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="blue" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <h1><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="orange" class="bi bi-person-fill" viewBox="0 0 16 16">
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                 </svg>
             </h1>
-            <h2 class="text-center fw-bold mt-3 text-primary">Update Pet Owner Account</h2>
+            <h2 class="text-center fw-bold mt-3" style="color: orange;">Update Pet Owner Account</h2>
         </div>
         <form action="update.php?id=<?=$user->id?>" method="POST">
             <div class="row gx-3 mb-4">
@@ -80,7 +80,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <button type="submit" class="btn btn-primary w-100 rounded-3 mt-3">Update Account</button>
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3 mt-3">Update Account</button>
                 </div>
                 <div class="col-6">
                     <a type="button" class="btn btn-danger w-100 rounded-3 mt-3" name="sub" href="index.php">Cancel</a>

@@ -87,8 +87,8 @@
 
             <div class="d-grid">
                 <div class="d-flex gap-2 mt-3">
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3">Assign Product</button>
                     <a href="index.php" class="btn btn-danger w-100 rounded-3">Cancel</a>
-                    <button type="submit" class="btn btn-primary w-100 rounded-3">Assign Product</button>
                 </div>
             </div>
         </form>

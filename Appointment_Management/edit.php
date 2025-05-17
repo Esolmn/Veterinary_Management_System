@@ -134,9 +134,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center gap-2 mt-3">
+                    <div class="d-flex justify-content-center gap-4 mt-3">
+                        <button class="btn custom-purple-btn rounded-3">Update</button>
                         <a class="btn btn-danger rounded-3" href="index.php">Cancel</a>
-                        <button class="btn btn-warning">Update</button>
                     </div>
                 </form>
             </div>

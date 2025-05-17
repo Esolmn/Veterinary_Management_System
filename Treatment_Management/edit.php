@@ -22,9 +22,9 @@
             //display website
 ?>
 
-<div class="container-xxl mt-4">
-    <div class="row">
-        <div class="col-md-4">
+<div class="container-xxl p-4 mt-3 d-flex justify-content-center">
+    <div class="row g-4" style="min-height: 75%;">
+        <div class="col-md-4 d-flex h-75">
             <div class="card shadow rounded-4 p-4">
                 <div class="card-title text-center">
                     <h1>
@@ -82,21 +82,16 @@
                             <input type="number" id="doctor_fee" name="doctor_fee" class="form-control" step="0.01" min="0" value="<?= $treatments->doctor_fee ?>" required>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-6">
-                            <button type="submit" class="btn btn-warning w-100 rounded-3 mt-3">Update Treatment</button>
-                        </div>
-                        <div class="col-6">
-                            <a href="index.php" class="btn btn-danger w-100 rounded-3 mt-3"></a>
-                        </div>
+                    <div class="d-flex justify-content-between gap-2">
+                        <button type="submit" class="btn custom-purple-btn w-100 rounded-3">Update</button>
+                        <a href="index.php" class="btn btn-danger w-100 rounded-3">Cancel</a>
                     </div>
                 </form>
             </div>
         </div>
 
-        <div class="col-md-8">
-            <div class="card shadow rounded-4 p-4">
+        <div class="col-md-8 d-flex">
+            <div class="card shadow rounded-4 p-4 h-75">
                 <div class="card-title text-center">
                     <h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="purple" class="bi bi-clipboard2-fill" viewBox="0 0 16 16">

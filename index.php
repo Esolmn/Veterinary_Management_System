@@ -6,7 +6,7 @@
     <h1 class="text-center fw-bold mb-4" style="color: white; font-size: 4rem;">Welcome to VetCare</h1>
 </div>
 
-<div class="container my-4">
+<div class="container my-5 mb-5">
   <div id="vetcareCarousel" class="carousel slide mt-3 rounded mx-auto shadow" style="max-width: 1200px;" data-bs-ride="carousel">
       <div class="carousel-inner rounded-4 overflow-hidden" style="height: 400px;">
         <div class="carousel-item active">
