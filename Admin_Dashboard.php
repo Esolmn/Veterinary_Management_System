@@ -26,7 +26,7 @@
 
 ?>
 
-<div class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
+<div class="container d-flex justify-content-center align-items-center" style="height: <?= ($_SESSION['role'] == 'admin') ? '60vh' : '75vh'; ?>;">
     <div class="row w-100 justify-content-center gy-4">
         <div class="col-lg-4 col-md-6">
             <div class="card shadow rounded-4 p-4">
