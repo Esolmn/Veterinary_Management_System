@@ -132,13 +132,17 @@
         }
 
         public static function countByRole($role) {
-            $sql = "SELECT COUNT(*) as count FROM users WHERE role = :role";
-            $stmt = self::$conn->prepare($sql);
-            $stmt->bindParam(':role', $role);
-            $stmt->execute();
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-            return $result['count'] ?? 0; 
+            try {
+                $sql = "SELECT COUNT(*) as count FROM users WHERE role = :role";
+                $stmt = self::$conn->prepare($sql);
+                $stmt->bindParam(':role', $role);
+                $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+                return $result['count'] ?? 0; 
+            } catch (PDOException $e) {
+                die("Failed to count users: " . $e->getMessage());
+            }
         }
 
         public static function resetPassword($id) {
