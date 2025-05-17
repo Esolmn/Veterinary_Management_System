@@ -92,11 +92,6 @@
             return $result ? array_map(fn($data) => new self($data), $result) : [];
 
     }
-
-    // public function treatments() {
-    //     $treatments = Treatment::where('id', '=', $this->treatment_id);
-    //     return $treatments ?? null;    
-    // }
 }
 
 ?>
