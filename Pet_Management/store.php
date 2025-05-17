@@ -13,14 +13,14 @@
 ?>
 
 <?php
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST['name']) || empty($_POST['user_id'])) {
-            if(isset($_SESSION['role']) && $_SESSION['role'] == 'superadmin' || $_SESSION['role'] == 'admin') {
-                header('Location: index.php');
-            } else {
-                header('Location: ../Pet_Owner_Dashboard/index.php');
-            }
-            exit();
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST['name']) || empty($_POST['user_id'])) {
+        if(isset($_SESSION['role']) && $_SESSION['role'] == 'superadmin' || $_SESSION['role'] == 'admin') {
+            header('Location: index.php');
+        } else {
+            header('Location: ../Pet_Owner_Dashboard/index.php');
         }
+        exit();
+    }
         include '../layout/header.php';
 
         if($user->status != 'active') {
@@ -35,6 +35,23 @@
                 });
             </script>";
             exit();
+        }
+
+        $pet_names = Pet::where('user_id', '=', $_POST['user_id']);
+        foreach($pet_names as $pet_name) {
+            if($pet_name->name == $_POST['name']) {
+                echo "<script>
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Pet name already exists',
+                        icon: 'error',
+                        showConfirmButton: 'Ok',
+                    }).then(function() {
+                        window.location.href = 'create.php';
+                    });
+                </script>";
+                exit();
+            }
         }
 
         $data = [
