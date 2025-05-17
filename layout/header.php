@@ -28,10 +28,10 @@
 
 <?php 
 
-    $current_link = $_SERVER['REQUEST_URI'];
+    $current_link = $_SERVER['REQUEST_URI']; //nilalagay buong url 
 
     function activeLink($path) {
-        $current_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $current_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); //inaalis ung mga ? or like store.php?id=2 ganyan
 
         return $current_path === $path ? 'active-link' : '';
     }
