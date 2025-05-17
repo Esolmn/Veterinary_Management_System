@@ -34,7 +34,7 @@
   <div class="text-center px-3 px-md-5">
     <h2 class="fw-bold mb-4" style="color: orange;">About Us</h2>
     <p class="mx-auto text-secondary" style="max-width: 1000px; font-size: 1.1rem; line-height: 1.6;">
-      The <strong>Veterinary Management System</strong> is a user-friendly platform designed to simplify veterinary clinic operations.
+      The <strong style="color: orange;">Veterinary Management System</strong> is a user-friendly platform designed to simplify veterinary clinic operations.
       It helps manage pet records, treatments, appointments, and user accounts with secure, role-based access for Super-Admins, Admins, and Pet Owners.
       Our goal is to make pet care more organized, efficient, and accessible.
     </p>

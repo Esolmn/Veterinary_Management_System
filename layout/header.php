@@ -53,7 +53,7 @@
                     <?php else : ?>
                     <li class="nav-item"><a class="content nav-link ms-2" href="/Veterinary_Management_System/Pet_Owner_Dashboard/index.php">Dashboard</a></li>
                     <li class="nav-item"><a class="content nav-link ms-2" href="/Veterinary_Management_System/Pet_Owner_Dashboard/appointments.php">Appointments</a></li>
-                    <li class="nav-item"><a class="content nav-link ms-2" href="/Veterinary_Management_System/Pet_Owner_Dashboard/treatments.php">Pet Treatments</a></li>
+                    <li class="nav-item"><a class="content nav-link ms-2" href="/Veterinary_Management_System/Pet_Owner_Dashboard/treatments.php">Pets Treatments</a></li>
                     <?php endif; ?>
                     <?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'superadmin' || $_SESSION['role'] == 'admin')) {
                         echo '<li class="nav-item"><a class="content nav-link ms-4" href="/Veterinary_Management_System/Pet_Owner_Management/index.php">Pet Owners</a></li>';
