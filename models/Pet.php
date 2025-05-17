@@ -98,12 +98,16 @@
         }
 
         public static function countPet() {
-            $sql = "SELECT COUNT(*) as count FROM pets";
-            $stmt = self::$conn->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-            return $result['count'] ?? 0;
+            try {
+                $sql = "SELECT COUNT(*) as count FROM pets";
+                $stmt = self::$conn->prepare($sql);
+                $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+                return $result['count'] ?? 0;
+            } catch (PDOException $e) {
+                die("Failed to count pets: " . $e->getMessage());
+            }
         }
 }
 
