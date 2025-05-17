@@ -7,16 +7,16 @@
 </div>
 
 <div class="container my-5 mb-5">
-  <div id="vetcareCarousel" class="carousel slide mt-3 rounded mx-auto shadow" style="max-width: 1200px;" data-bs-ride="carousel">
+  <div id="vetcareCarousel" class="carousel slide mt-3 rounded mx-auto shadow" style="max-width: 1200px; width: 100%;" data-bs-ride="carousel">
       <div class="carousel-inner rounded-4 overflow-hidden" style="height: 400px;">
         <div class="carousel-item active">
-          <img src="layout/Asset/1banner.png" class="d-block w-100 h-100" style="object-fit: cover;">
+          <img src="layout/Asset/1banner.png" class="d-block w-100 h-100" style="object-fit: cover; height: 100%; max-height: 400px;">
         </div>
         <div class="carousel-item">
-          <img src="layout/Asset/2banner.png" class="d-block w-100 h-100" style="object-fit: cover;">
+          <img src="layout/Asset/2banner.png" class="d-block w-100 h-100" style="object-fit: cover; height: 100%; max-height: 400px;">
         </div>
         <div class="carousel-item">
-          <img src="layout/Asset/3banner.png" class="d-block w-100 h-100" style="object-fit: cover;">
+          <img src="layout/Asset/3banner.png" class="d-block w-100 h-100" style="object-fit: cover; height: 100%; max-height: 400px;">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#vetcareCarousel" data-bs-slide="prev">
