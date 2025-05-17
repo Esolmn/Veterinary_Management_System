@@ -67,24 +67,6 @@
                     <input type="number" id="cost" name="cost" class="form-control bg-secondary-subtle" readonly required step="any" style="background-color: #e9ecef;">                
                 </div>
             </div>
-
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const retailPrice = document.getElementById('retail_price');
-                const quantity = document.getElementById('quantity');
-                const cost = document.getElementById('cost');
-
-                function updateCost() {
-                    const price = parseFloat(retailPrice.value) || 0;
-                    const qty = parseFloat(quantity.value) || 0;
-                    cost.value = price * qty;
-                }
-
-                retailPrice.addEventListener('input', updateCost);
-                quantity.addEventListener('input', updateCost);
-            });
-            </script>
-
             <div class="d-grid">
                 <div class="d-flex gap-2 mt-3">
                     <button type="submit" class="btn custom-purple-btn w-100 rounded-3">Assign Product</button>
