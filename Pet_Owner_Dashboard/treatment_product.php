@@ -23,7 +23,7 @@
 ?>  
     
 <div class="container mt-5 d-flex justify-content-center align-items-center">    
-    <div class="card shadow rounded-4 p-4">
+    <div class="card shadow rounded-4 p-4 w-50">
         <p class="text-center fw-bold mt-2 fs-2 mb-4" style="color: orange;">Treatment Products</p>
         <div class="card shadow rounded-4 p-2">
             <div style="max-height: 400px; overflow-y: auto;">
@@ -51,7 +51,7 @@
                             </tr>
                             <?php endforeach; ?>
                             <tr class="table-warning">
-                                <td colspan="2" class="text-end fw-bold">Total Cost (Products + Doctor Fee)</td>
+                                <td colspan="2" class="text-start fw-bold">Total Cost (Products + Doctor Fee)</td>
                                 <td class="fw-bold">₱<?= number_format($totalCost + $doctor_fee, 2) ?></td>
                             </tr>
                         <?php endif; ?>

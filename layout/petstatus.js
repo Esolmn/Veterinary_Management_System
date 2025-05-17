@@ -1,7 +1,7 @@
 function animateCounter(id, target) {
     const el = document.getElementById(id);
     let count = 0;
-    const duration = 1000;
+    const duration = 3000;
     const step = Math.ceil(target / (duration / 10));
     
     const interval = setInterval(() => {
