@@ -7,7 +7,7 @@
     $db = $database->getConnection();
     User::setConnection($db);
 
-    if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'superadmin') {
+    if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'superadmin' && $_SESSION['role'] !== 'admin') {
 
         include '../layout/header.php';
 
