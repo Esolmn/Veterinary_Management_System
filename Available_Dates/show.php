@@ -78,7 +78,7 @@
 
             <div class="d-flex justify-content-center align-items-center gap-2 my-4">
                 <a class="btn btn-outline-secondary btn-lg px-4<?= $prevId ? '' : ' disabled' ?>" href="<?= $prevId ? 'show.php?id=' . $prevId : '#' ?>" tabindex="<?= $prevId ? '0' : '-1' ?>">&laquo;</a>
-                <a class="btn btn-primary btn-lg px-5" href="index.php">Back</a>
+                <a class="btn custom-purple-btn btn-lg px-5" href="index.php">Back</a>
                 <a class="btn btn-outline-secondary btn-lg px-4<?= $nextId ? '' : ' disabled' ?>" href="<?= $nextId ? 'show.php?id=' . $nextId : '#' ?>" tabindex="<?= $nextId ? '0' : '-1' ?>">&raquo;</a>
             </div>
 
