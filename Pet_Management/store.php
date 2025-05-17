@@ -38,6 +38,7 @@
         }
 
         $pet_names = Pet::where('user_id', '=', $_POST['user_id']);
+        
         foreach($pet_names as $pet_name) {
             if($pet_name->name == $_POST['name']) {
                 echo "<script>
