@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const isPetOwnerLoggedIn = userSelect && userSelect.tagName !== 'SELECT';
 
-    // Hide all options initially
+    // tinatago options pag wala sa pet owner
     petSelects.forEach(function(select) {
         Array.from(select.options).forEach(function(option) {
             if (option.value) option.style.display = 'none';
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (!isPetOwnerLoggedIn) {
-        // Admin/Superadmin: Filter by owner selection
+        // Pag admin/superadmin naka log in ididisplay pets depending sa pet owner
         userSelect.addEventListener('change', function () {
             const ownerId = this.value;
 
@@ -34,12 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
             specieSelect.value = '';
         });
 
-        // Trigger filter on load
         if (userSelect.value) {
             userSelect.dispatchEvent(new Event('change'));
         }
     } else {
-        // Pet owner logged in: Show all their pet info
+        // Pag pet owner naka log in, ididisplay pets nya
         petSelects.forEach(function(select) {
             Array.from(select.options).forEach(function(option) {
                 option.style.display = ''; // show everything
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Auto-select breed/specie when pet is selected
+    // para auto select ang breed at specie kapag na select na ang pet
     petSelect.addEventListener('change', function () {
         const selectedOption = petSelect.options[petSelect.selectedIndex];
 
@@ -60,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const breed = selectedOption.getAttribute('data-breed');
         const specie = selectedOption.getAttribute('data-specie');
 
-        // Set breed
+        // nilalagay ung breed
         Array.from(breedSelect.options).forEach(function(option) {
             if (option.value === breed && option.style.display !== 'none') {
                 breedSelect.value = breed;
             }
         });
 
-        // Set specie
+        // nilalagay ung specie
         Array.from(specieSelect.options).forEach(function(option) {
             if (option.value === specie && option.style.display !== 'none') {
                 specieSelect.value = specie;
