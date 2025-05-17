@@ -17,7 +17,7 @@
 <div class="container-xxl p-4 shadow rounded mt-5" style="background-color: white;"> 
     <h1 class="text-center" style="color: orange;">Pet Owners</h1>
     <div class="mt-4 mb-4 d-flex justify-content-between">
-    <a class="btn btn-warning" href="create.php">Create Account</a>
+    <a class="btn custom-purple-btn" href="create.php">Create Account</a>
         <!-- <div class="ml-auto">
             <a href="../reports/users_report.php" target="_blank" class="btn btn-success">Users PDF</a>
             <a href="../reports/users_report.php?status=active" target="_blank" class="btn btn-success">Active Users PDF</a>

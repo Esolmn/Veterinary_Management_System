@@ -98,3 +98,8 @@ body {
 .custom-purple-btn:hover {
     background-color: #8b43e0 !important;
 }
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}

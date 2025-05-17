@@ -75,7 +75,7 @@
 
             <div class="row">
                 <div class="col-6">
-                    <button type="submit" class="btn btn-primary w-100 rounded-3 mt-3">Create Account</button>
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3 mt-3">Create Account</button>
                 </div>
                 <div class="col-6">
                     <a href="index.php" class="btn btn-danger w-100 rounded-3 mt-3">Cancel</a>
