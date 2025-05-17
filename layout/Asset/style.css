@@ -1,0 +1,100 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background:
+
+    radial-gradient(circle at 20% 20%, rgba(255, 165, 0, 0.2), transparent 50%),  /*unang percent is horizontal sa website, vertical nmn pangalawa*/
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.3), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(255, 223, 0, 0.5), transparent 40%),
+    linear-gradient(to top, white, #a259ff) !important;
+}
+
+.Title {
+    font-size: 25px;
+    font-family: 'Varela', sans-serif;
+    color: orange;
+}
+
+.Title:hover {
+    color: rgb(255, 255, 255);
+}
+
+.vertical-line {
+    width: 3px;
+    height: 30px;
+    background-color: white;
+}
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0.5, 0.5);
+    z-index: 1100;
+    position: relative;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+    backdrop-filter: blur(10px);           /* blur effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.content {
+    color: white;
+    font-size: 18px;
+}
+
+.content:hover {
+    color: rgb(255, 235, 20);
+}
+
+.content:active {
+    color: rgb(255, 235, 20);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.navbar-nav {
+    height: 100%;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    min-width: 200px;
+}
+
+.logout {
+    color: black;
+    font-size: 13px;
+}
+
+.logout:hover {
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.dashboard-title {
+    font-family: 'Varela', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color:rgb(255, 235, 20);
+    text-shadow: 1px 1px 2px black;
+}
+
+.custom-purple-btn {
+    background-color: #a259ff !important;
+    border: none !important;
+    color: white !important;
+}
+
+.custom-purple-btn:hover {
+    background-color: #8b43e0 !important;
+}
