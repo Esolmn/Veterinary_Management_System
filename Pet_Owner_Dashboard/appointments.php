@@ -24,7 +24,7 @@
             <a href="../Appointment_Management/create.php" class="btn custom-purple-btn rounded-3 mb-2 text-start">Schedule Appointment</a>
             <a href="index.php" class="btn btn-danger rounded-3 mb-2 text-end">Back</a>
         </div>
-        <div class="card shadow rounded-4 p-4" style="min-width: 800px;">
+        <div class="card shadow rounded-4 p-4 table-responsive w-100 overflow-auto">
             <table class="table table-hover align-middle fs-5">
             <thead>
                 <tr>
