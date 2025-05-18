@@ -25,7 +25,7 @@
 <div class="container mt-5 d-flex justify-content-center align-items-center">    
     <div class="card shadow rounded-4 p-4 w-50">
         <p class="text-center fw-bold mt-2 fs-2 mb-4" style="color: orange;">Treatment Products</p>
-        <div class="card shadow rounded-4 p-2">
+        <div class="card shadow-gradient rounded-4 p-2">
             <div style="max-height: 400px; overflow-y: auto;">
                 <table class="table">
                     <thead class="table table-hover" style="position: sticky; top: 0; z-index: 1;">
@@ -58,6 +58,9 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <a class="btn btn-danger rounded-3 w-25 mt-4" href="treatments.php">Back</a>
         </div>
     </div>
 </div>

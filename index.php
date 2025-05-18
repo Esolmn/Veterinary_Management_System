@@ -3,7 +3,7 @@
 ?>
 
 <div class="d-flex justify-content-center align-items-center mt-4">
-    <h1 class="text-center fw-bold mb-4" style="color: white; font-size: 4rem;">Welcome to VetCare</h1>
+    <h1 class="text-center fw-bold mb-4" style="color: white; font-size: 4rem; text-shadow: 2px 4px 4px rgb(230, 221, 51);">Welcome to VetCare</h1>
 </div>
 
 <div class="container my-5 mb-5">
@@ -49,7 +49,6 @@
       <strong style="color: orange;">INTECH 2201: Web Applications Development, Second Term</strong>.
     </p>
     <p class="mb-1">This particular version of the system is intended for use by Group 1 only and is not for public distribution or use.</p>
-    <p class="mb-0">This system is provided &quot;as is&quot; without warranty of any kind.</p>
   </div>
 </footer>
 

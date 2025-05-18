@@ -24,13 +24,13 @@
             <a href="../Appointment_Management/create.php" class="btn custom-purple-btn rounded-3 mb-3 mt-3 text-start">Schedule Appointment</a>
             <a href="index.php" class="btn btn-danger rounded-3 mb-3 mt-3 text-end">Back</a>
         </div>
-        <div class="card shadow rounded-4 p-4 table-responsive w-100 overflow-auto">
+        <div class="card shadow-gradient rounded-4 p-4 table-responsive w-100 overflow-auto">
             <table class="table table-hover align-middle fs-5">
             <thead>
                 <tr>
-                    <th class="text-center" scope="col">Pet Name</th>
-                    <th class="text-center" scope="col">Appointment Date</th>
-                    <th class="text-center" scope="col">Status</th>
+                    <th class="text-center">Pet Name</th>
+                    <th class="text-center">Appointment Date</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
