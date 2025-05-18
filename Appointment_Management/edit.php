@@ -45,9 +45,9 @@
     <div class="row w-100 justify-content-center" style="max-width: 1100px;">
         <!-- Left Card -->
         <div class="col-md-6 mb-4 mb-md-0">
-            <div class="card shadow rounded-4 p-4 h-100">
+            <div class="card shadow-gradient rounded-4 p-4 h-100">
                 <div class="card-title text-center">
-                    <h2 class="fw-bold mb-3" style="color: orange;">PET DETAILS</h2>
+                    <h2 class="fw-bold mb-3" style="color: orange;">Pet Details</h2>
                 </div>
                 <!-- ...pet/owner fields... -->
                 <div class="mb-3">
@@ -70,9 +70,9 @@
         </div>
         <!-- Right Card -->
         <div class="col-md-6">
-            <div class="card shadow rounded-4 p-4 h-100">
+            <div class="card shadow-gradient rounded-4 p-4 h-100">
                 <div class="card-title text-center">
-                    <h2 class="fw-bold mb-3" style="color: orange;">APPOINTMENT DETAILS</h2>
+                    <h2 class="fw-bold mb-3" style="color: orange;">Appointment Details</h2>
                 </div>
                 <form action="update.php?id=<?=$apt->id?>" method="POST" id="appointmentForm">
                     <div class="mb-3">

@@ -16,14 +16,14 @@
 ?>
 
 <div class="container-xxl d-flex justify-content-center align-items-center mt-5">
-    <div class="card shadow rounded-4 p-4" style="width: 700px;">
+    <div class="card shadow-gradient rounded-4 p-4" style="width: 700px;">
         <div class="card-title text-center">
             <h1>
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="blue" class="bi bi-capsule" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="purple" class="bi bi-capsule" viewBox="0 0 16 16">
                     <path d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429z"/>
                 </svg>
             </h1>
-            <h2 class="fw-bold mt-3 text-primary">ASSIGN PRODUCT</h2>
+            <h2 class="fw-bold mt-3" style="color: purple;">Assign Product</h2>
         </div>
 
         <form action="store.php" method="POST" class="mt-4">

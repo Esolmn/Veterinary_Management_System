@@ -26,22 +26,23 @@
             //display website
 ?>
 
-<div class="container-xxl p-4 shadow rounded-5 mt-2">
+<div class="container-xxl p-4 rounded-5 mt-4">
     <div class="row gx-2">
         <div class="col-4">
-            <div class="card shadow rounded-4 p-2 me-3">
-                <div class="card-body text-center">
-                    <h1 class="text-center mb-4" style="color: orange">Pet Owner:</h1>
-                    <h2 class="text-center mt-3"><?=$users->name?></h2> 
+            <d class="card rounded-4 p-4 text-center">
+                <div class="card shadow-gradient rounded-4 p-2">
+                    <div class="card-body text-center">
+                        <h1 class="text-center mb-4" style="color: orange">Pet Owner:</h1>
+                        <h2 class="text-center mt-3"><?=$users->name?></h2> 
+                    </div>
+                </div>
+                <div class="card shadow-gradient rounded-4 p-2 mt-3">
+                    <div class="d-flex justify-content-between gap-3">
+                        <a class="btn custom-purple-btn w-50 rounded-3" href="../reports/pet_report.php?id=<?= $pet->id ?>">Generate PDF</a>
+                        <a class="btn btn-danger w-50 rounded-3" href="index.php">Back</a>
+                    </div>
                 </div>
             </div>
-            <div class="card shadow rounded-4 p-2 me-3 mt-2">
-                <div class="d-flex justify-content-between gap-3">
-                    <a class="btn custom-purple-btn w-50 rounded-3" href="../reports/pet_report.php?id=<?= $pet->id ?>">Generate PDF</a>
-                    <a class="btn btn-danger w-50 rounded-3" href="index.php">Back</a>
-                </div>
-            </div>
-        </div>
         <div class="col-8">
             <div class="card shadow rounded-4 p-2">
                 <div class="card-body text-center">
@@ -51,6 +52,7 @@
                         </svg>
                         <span class="ms-2 mt-4">Pet Details</span>
                     </h1>
+                    <div class="shadow-gradient rounded-4 p-2">
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
@@ -73,6 +75,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,47 +84,49 @@
     <div class="col-12">
         <div class="card shadow rounded-4 p-4">
             <h4 class="mb-4 text-center" style="color: orange; font-size: 30px">Treatments</h4>
-            <table class="table table-hover align-middle text-center">
-                <thead>
+            <div class="card shadow-gradient rounded-4 p-2">
+                <table class="table table-hover align-middle text-center">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Treatment Name</th>
+                            <th>Diagnosis</th>
+                            <th>Description</th>
+                            <th>Doctor Fee</th>
+                            <th>Date</th>
+                            <th>Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $treatments = Treatment::where('pet_id', '=', $pet->id);
+                        if(count($treatments)>0):
+                        foreach ($treatments as $treatment):
+                            $products = Product::where('treatment_id', '=', $treatment->id);
+                            $totalProductCost = 0;
+                            foreach ($products as $product) {
+                                $totalProductCost += $product->cost;
+                            }
+                            $totalCost = $totalProductCost + $treatment->doctor_fee;
+                    ?>
+                        <tr>
+                            <td><?= $treatment->id ?></td>
+                            <td><?= $treatment->treatment_name ?></td>
+                            <td><?= $treatment->diagnosis ?></td>
+                            <td style="white-space: normal; width: 25%;"><?= $treatment->description ?></td>
+                            <td>₱<?= number_format($treatment->doctor_fee, 2) ?></td>
+                            <td><?= $treatment->date ?></td>
+                            <td><strong>₱<?= number_format($totalCost, 2) ?></strong></td>
+                        </tr>
+                    <?php endforeach; 
+                    else: ?>
                     <tr>
-                        <th>ID</th>
-                        <th>Treatment Name</th>
-                        <th>Diagnosis</th>
-                        <th>Description</th>
-                        <th>Doctor Fee</th>
-                        <th>Date</th>
-                        <th>Total Cost</th>
+                <td colspan="7" class="text-center">No treatments found for this pet.</td>
                     </tr>
-                </thead>
-                <tbody>
-                <?php
-                    $treatments = Treatment::where('pet_id', '=', $pet->id);
-                    if(count($treatments)>0):
-                    foreach ($treatments as $treatment):
-                        $products = Product::where('treatment_id', '=', $treatment->id);
-                        $totalProductCost = 0;
-                        foreach ($products as $product) {
-                            $totalProductCost += $product->cost;
-                        }
-                        $totalCost = $totalProductCost + $treatment->doctor_fee;
-                ?>
-                    <tr>
-                        <td><?= $treatment->id ?></td>
-                        <td><?= $treatment->treatment_name ?></td>
-                        <td><?= $treatment->diagnosis ?></td>
-                        <td style="white-space: normal; width: 25%;"><?= $treatment->description ?></td>
-                        <td>₱<?= number_format($treatment->doctor_fee, 2) ?></td>
-                        <td><?= $treatment->date ?></td>
-                        <td><strong>₱<?= number_format($totalCost, 2) ?></strong></td>
-                    </tr>
-                <?php endforeach; 
-                else: ?>
-                <tr>
-              <td colspan="7" class="text-center">No treatments found for this pet.</td>
-                </tr>
-                <?php endif; ?>
-                </tbody>
-            </table>
+                    <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
  

@@ -20,7 +20,7 @@
 ?>
 
 <div class="container-xxl d-flex justify-content-center align-items-center">
-    <div class="card shadow rounded-4 p-4 mt-5" style="width: 700px;">
+    <div class="card shadow-gradient rounded-4 p-4 mt-5" style="width: 700px;">
         <div class="card-title text-center">
             <h1>
                 <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="orange" viewBox="0 0 512 512">

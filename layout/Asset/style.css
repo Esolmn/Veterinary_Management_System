@@ -14,11 +14,11 @@ body {
 .Title {
     font-size: 25px;
     font-family: 'Varela', sans-serif;
-    color: orange;
+    color: rgb(255, 255, 255);
 }
 
 .Title:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(255, 247, 0);
 }
 
 .vertical-line {
@@ -126,4 +126,9 @@ body {
 .navbar-nav .nav-link.active-link {
     color: rgb(255, 235, 20) !important;
     font-weight: 700;
+}
+
+.shadow-gradient {
+    box-shadow: 0 4px 20px rgba(245, 243, 97, 0.5), /*horizontal, vertical shadow, blur*/
+                0 4px 40px rgba(134, 32, 230, 0.3);
 }

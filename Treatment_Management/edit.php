@@ -25,14 +25,14 @@
 <div class="container-xxl p-4 mt-3 d-flex justify-content-center">
     <div class="row g-4" style="min-height: 75%;">
         <div class="col-md-4 d-flex h-75">
-            <div class="card shadow rounded-4 p-4">
+            <div class="card shadow-gradient rounded-4 p-4">
                 <div class="card-title text-center">
                     <h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="purple" class="bi bi-capsule" viewBox="0 0 16 16">
                             <path d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429z"/>
                         </svg>
                     </h1>
-                    <h2 class="fw-bold mt-3" style="color: orange;">Update Treatment</h2>
+                    <h2 class="fw-bold mt-3" style="color: purple;">Update Treatment</h2>
                 </div>
 
                 <form action="update.php?id=<?=$treatments->id?>" method="POST" class="mt-4">
@@ -91,7 +91,7 @@
         </div>
 
         <div class="col-md-8 d-flex">
-            <div class="card shadow rounded-4 p-4 h-75">
+            <div class="card shadow-gradient rounded-4 p-4 h-75">
                 <div class="card-title text-center">
                     <h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="purple" class="bi bi-clipboard2-fill" viewBox="0 0 16 16">
@@ -99,7 +99,7 @@
                             <path d="M3.5 1h.585A1.5 1.5 0 0 0 4 1.5V2a1.5 1.5 0 0 0 1.5 1.5h5A1.5 1.5 0 0 0 12 2v-.5q-.001-.264-.085-.5h.585A1.5 1.5 0 0 1 14 2.5v12a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-12A1.5 1.5 0 0 1 3.5 1"/>
                         </svg>
                     </h1>
-                    <h2 class="fw-bold mt-3" style="color: orange;">List of Pets for Reference</h2>
+                    <h2 class="fw-bold mt-3" style="color: purple;">List of Pets for Reference</h2>
                 </div>
                 <div class="table-responsive">
                     <table id="vetTable" class="table table-striped">

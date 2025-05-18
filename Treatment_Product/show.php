@@ -24,7 +24,7 @@
             //display website
 ?>
 
-<div class="container-xxl p-4 shadow rounded-5 mt-5">
+<div class="container-xxl p-4 rounded-5 mt-5">
     <div class="row gx-4 gy-4">
         <!-- Left Side: Product Details Card -->
         <div class="col-md-4 d-flex justify-content-center">
@@ -33,29 +33,31 @@
                     <h2 class="text-center fw-bolder mb-3" style="color: orange;">Product Details</h2>
                 </div>
                 <div class="card-body pt-3">
-                    <div class="row gx-3 mb-2">
-                        <div class="col-md-5 fw-bolder">Product Name:</div>
-                        <div class="col-md-7"><?=$product->product_name?></div>
-                    </div>
-                    <div class="row gx-3 mb-2">
-                        <div class="col-md-5 fw-bolder">Assigned Treatment:</div>
-                        <div class="col-md-7"><?=$product->treatment_id?> - <?=$treatment->treatment_name?></div>
-                    </div>
-                    <div class="row gx-3 mb-2">
-                        <div class="col-md-5 fw-bolder">Cost Price:</div>
-                        <div class="col-md-7"><?=$product->cost_price?></div>
-                    </div>
-                    <div class="row gx-3 mb-2">
-                        <div class="col-md-5 fw-bolder">Retail Price:</div>
-                        <div class="col-md-7"><?=$product->retail_price?></div>
-                    </div>
-                    <div class="row gx-3 mb-2">
-                        <div class="col-md-5 fw-bolder">Quantity:</div>
-                        <div class="col-md-7"><?=$product->quantity?></div>
-                    </div>
-                    <div class="row gx-3 mb-2">
-                        <div class="col-md-5 fw-bolder">Cost:</div>
-                        <div class="col-md-7"><?=$product->cost?></div>
+                    <div class="card shadow-gradient rounded-4 p-4">
+                        <div class="row gx-3 mb-2">
+                            <div class="col-md-5 fw-bolder">Product Name:</div>
+                            <div class="col-md-7"><?=$product->product_name?></div>
+                        </div>
+                        <div class="row gx-3 mb-2">
+                            <div class="col-md-5 fw-bolder">Assigned Treatment:</div>
+                            <div class="col-md-7"><?=$product->treatment_id?> - <?=$treatment->treatment_name?></div>
+                        </div>
+                        <div class="row gx-3 mb-2">
+                            <div class="col-md-5 fw-bolder">Cost Price:</div>
+                            <div class="col-md-7"><?=$product->cost_price?></div>
+                        </div>
+                        <div class="row gx-3 mb-2">
+                            <div class="col-md-5 fw-bolder">Retail Price:</div>
+                            <div class="col-md-7"><?=$product->retail_price?></div>
+                        </div>
+                        <div class="row gx-3 mb-2">
+                            <div class="col-md-5 fw-bolder">Quantity:</div>
+                            <div class="col-md-7"><?=$product->quantity?></div>
+                        </div>
+                        <div class="row gx-3 mb-2">
+                            <div class="col-md-5 fw-bolder">Cost:</div>
+                            <div class="col-md-7"><?=$product->cost?></div>
+                        </div>
                     </div>
                 </div>
                  <div class="card-footer bg-white border-0 d-flex justify-content-center align-items-center gap-2 flex-wrap pt-3">
@@ -81,36 +83,38 @@
                     <h2 class="text-center fw-bolder mb-3" style="color: orange;">Treatment Preview</h2>
                 </div>
                 <div class="card-body pt-3">
-                    <div class="table-responsive">
-                        <table id="vetTable" class="table table-striped table-hover table-bordered w-100">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Pet ID</th>
-                                    <th>Diagnosis</th>
-                                    <th>Description</th>
-                                    <th>Date</th>
-                                    <th>Doctor Fee</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
-                                    $product_treatment = Treatment::where('id', '=', $product->treatment_id);
-                                    foreach($product_treatment as $treatment) :
-                                ?>
-                                <tr>
-                                    <td><?=$treatment->id?></td>
-                                    <td><?=$treatment->treatment_name?></td>
-                                    <td><?=$treatment->pet_id?></td>
-                                    <td><?=$treatment->diagnosis?></td>
-                                    <td><?=$treatment->description?></td>
-                                    <td><?=$treatment->date?></td>
-                                    <td>₱<?=number_format($treatment->doctor_fee, 2)?></td>
-                                </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
+                    <div class="card shadow-gradient rounded-4 p-4">
+                        <div class="table-responsive">
+                            <table id="vetTable" class="table table-striped table-hover w-100">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Pet ID</th>
+                                        <th>Diagnosis</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                        <th>Doctor Fee</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php 
+                                        $product_treatment = Treatment::where('id', '=', $product->treatment_id);
+                                        foreach($product_treatment as $treatment) :
+                                    ?>
+                                    <tr>
+                                        <td><?=$treatment->id?></td>
+                                        <td><?=$treatment->treatment_name?></td>
+                                        <td><?=$treatment->pet_id?></td>
+                                        <td><?=$treatment->diagnosis?></td>
+                                        <td><?=$treatment->description?></td>
+                                        <td><?=$treatment->date?></td>
+                                        <td>₱<?=number_format($treatment->doctor_fee, 2)?></td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

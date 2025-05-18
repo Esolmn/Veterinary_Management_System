@@ -17,7 +17,7 @@
         //display website
 ?>
 
-<div class="card w-50 shadow rounded-4 mx-auto mt-5 p-4">   
+<div class="card w-50 shadow-gradient rounded-4 mx-auto mt-5 p-4">   
     <div class="card-title text-center">
         <h1 class="text-center mt-4" style="color: orange;">Available Dates</h1>
     </div>

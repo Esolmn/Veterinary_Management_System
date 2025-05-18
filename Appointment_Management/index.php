@@ -17,8 +17,8 @@
     if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin' || $_SESSION['role'] == 'superadmin') {
 ?>
 
-<div class="container-xxl mt-3 p-4 shadow rounded" style="background-color: white; max-width: 1500px;">
-    <h1 class="text-center fw-bolder mb-3" style="color: orange;">APPOINTMENTS</h1>
+<div class="container-xxl mt-3 p-4 shadow rounded-4" style="background-color: white; max-width: 1500px;">
+    <h1 class="text-center fw-bolder mb-3" style="color: orange;">Appointments</h1>
         <a class="btn custom-purple-btn mb-3" href="create.php">Book Appointment</a>
     <table id="aptTable" class="table table-striped table-hover table-borderd">
         <thead>

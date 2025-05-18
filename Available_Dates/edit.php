@@ -15,7 +15,7 @@
 ?>
 
 <div class="container-xxl d-flex justify-content-center align-items-center mt-5">
-    <div class="card shadow rounded-4 p-4" style="width: 700px;">
+    <div class="card shadow-gradient rounded-4 p-4" style="width: 700px;">
         <div class="card-title text-center">
             <h1 class="mb-5 mt-3" style="color: orange;">Update Date</h1>
         </div>
