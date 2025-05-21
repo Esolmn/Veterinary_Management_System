@@ -98,7 +98,7 @@
                             <?php foreach($availables as $available) : 
                                     if($available->date < date('Y-m-d')) continue;
                                 ?>
-                                <option value="<?= $available->id ?>"><?= $available->date ?></option>
+                                <option value="<?= $available->id ?>"><?= date("F j, Y", strtotime($available->date)) ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
