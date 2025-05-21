@@ -1,5 +1,5 @@
 <?php 
-    include '../layout/header.php';
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/Pet.php';
     require_once '../models/User.php';
@@ -20,6 +20,8 @@
         header('Location: index.php');
         exit();
     }
+
+    include '../layout/header.php';
 
     $pet_owner = User::find($pet->user_id); //pangkuha ng pet owner
     $owner_status = $pet_owner && $pet_owner->status == 'inactive'; //check if the pet owner is inactive

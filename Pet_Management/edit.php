@@ -1,6 +1,6 @@
 <?php 
-    include  '..\layout\header.php';
-    require_once  '../database/Database.php'; 
+    session_start();
+    require_once  '..\database/Database.php'; 
     require_once '..\models\Pet.php';
     require_once '..\models\User.php';
 
@@ -8,8 +8,14 @@
     $conn = $db->getConnection();
 
     Pet::setConnection($conn);
-    $pets = Pet::all();
     $pet = Pet::find($_GET['id']);
+
+    if(!$pet) {
+        header('Location: index.php');
+        exit();
+    }
+
+    include '../layout/header.php';
 
     User::setConnection($conn);
     $pet_owners = User::where('role', '=', 'pet_owner');

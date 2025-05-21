@@ -1,6 +1,5 @@
 <?php 
-
-    include '..\layout\header.php'; 
+    session_start();
     require_once '..\database\Database.php';
     require_once '..\models\Product.php';
 
@@ -13,6 +12,13 @@
             //display website
             $id = $_GET['id'];
             $product = Product::find($id);
+
+            if(!$product){
+                header('Location: index.php');
+                exit();
+            }
+
+            include  '../layout/header.php';
 ?>
 
 <?php

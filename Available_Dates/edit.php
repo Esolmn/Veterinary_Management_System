@@ -1,5 +1,5 @@
 <?php
-    include '../layout/header.php';
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/AvailableDate.php';
     require_once '../models/Appointment.php';
@@ -12,6 +12,13 @@
         //display website
         $id = $_GET['id'];
         $available_dates = AvailableDate::find($id);
+
+        if (!$available_dates) {
+            header('Location: index.php');
+            exit();
+        }
+
+        include '../layout/header.php';
 ?>
 
 <div class="container-xxl d-flex justify-content-center align-items-center mt-5">

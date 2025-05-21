@@ -1,5 +1,5 @@
 <?php 
-    include '../layout/header.php';
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/AvailableDate.php';
 
@@ -13,6 +13,14 @@
 
 <?php
     $availableDate = AvailableDate::find($_GET['id']);
+
+    if (!$availableDate) {
+        header('Location: index.php');
+        exit();
+    }
+
+    include '../layout/header.php';
+
     $hasAppointment = AvailableDate::hasAppointments($availableDate->id); //pagcheck kung may appointment ung available date
     
     if($availableDate) {

@@ -1,5 +1,5 @@
 <?php
-    include '../layout/header.php';
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/Appointment.php';
     require_once '../models/AvailableDate.php';
@@ -13,7 +13,16 @@
         
         $aptID = $_GET['id'];
         $apt = Appointment::find($aptID);
+
+         if (!$apt) {
+            header('Location: index.php');
+            exit();
+        }
+
+        include '../layout/header.php';
+
         $aptdate = AvailableDate::find($apt->aptdate_id);
+
 ?>
 
 <?php

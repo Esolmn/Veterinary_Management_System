@@ -17,6 +17,7 @@
     }
     
     include  '..\layout\header.php';
+    
     if (isset($_SESSION['role']) && ($_SESSION['role'] == 'superadmin' || $_SESSION['role'] == 'admin')) {
             //display website
 ?>

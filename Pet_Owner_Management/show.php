@@ -1,5 +1,5 @@
 <?php 
-    include '../layout/header.php';
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/User.php';
 
@@ -16,6 +16,8 @@
             header('Location: index.php');
             exit();
         }
+
+        include '../layout/header.php';
 ?>
 
 <div class="container-xxl p-4 mt-3">
