@@ -18,9 +18,8 @@
         }
 ?>
 
-<div class="container-xxl p-4 shadow rounded-5 mt-5">
+<div class="container-xxl p-4 mt-3">
     <div class="row gx-4 gy-4">
-        <!-- Left Side: Pet Owner Details Card -->
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card w-100 shadow rounded-4 p-4 mb-4 mb-md-0">
                 <div class="card-header bg-white border-0 pb-0">
@@ -57,14 +56,12 @@
                             <a href="../reports/petowners_indivreport.php?action=D&id=<?=$user->id?>" target="_blank" class="btn btn-warning w-100 h-100 d-flex align-items-center justify-content-center">Download</a>
                         </div>
                         <div class="col d-flex justify-content-end align-items-stretch">
-                            <a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-center" href="index.php">Back</a>
+                            <a class="btn btn-danger w-100 h-100 d-flex align-items-center justify-content-center" href="index.php">Back</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Right Side: List of Added Pets Card -->
         <div class="col-md-8">
             <div class="card shadow rounded-4 w-100 bg-white p-4">
                 <div class="card-header bg-white border-0 pb-0">
