@@ -31,7 +31,7 @@
         <div class="col-md-6 mb-4 mb-md-0">
             <div class="card shadow-gradient rounded-4 p-4 h-100">
                 <div class="card-title text-center">
-                    <h2 class="fw-bold mb-3" style="color: orange;">PET DETAILS</h2>
+                    <h2 class="fw-bold mb-3" style="color: orange;">Pet Details</h2>
                 </div>
                 <div class="mb-3">
                     <label for="petOwner" class="form-label fw-bolder">Owner's Name</label>
@@ -41,7 +41,9 @@
                     <?php else : ?>
                         <select name="user_id" id="petOwner" class="form-control" form="appointmentForm" required>
                             <option selected="selected"></option>
-                            <?php foreach($pet_owners as $pet_owner) : ?>
+                            <?php foreach($pet_owners as $pet_owner) : 
+                                    if($pet_owner->status == 'inactive') continue;
+                                ?>
                                 <option value="<?= $pet_owner->id ?>"><?= $pet_owner->name ?></option>
                             <?php endforeach; ?>
                         </select>
@@ -93,7 +95,9 @@
                         <label for="available_date" class="form-label fw-bolder">Available Date:</label>
                         <select name="aptdate_id" id="available_date" class="form-control" required>
                             <option selected="selected"></option>
-                            <?php foreach($availables as $available) : ?>
+                            <?php foreach($availables as $available) : 
+                                    if($available->date < date('Y-m-d')) continue;
+                                ?>
                                 <option value="<?= $available->id ?>"><?= $available->date ?></option>
                             <?php endforeach; ?>
                         </select>

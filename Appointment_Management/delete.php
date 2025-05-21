@@ -39,7 +39,7 @@
             echo "<script>
                     Swal.fire({
                         title: 'Error!',
-                        text: 'Cannot delete appointment request.',
+                        text: 'Cannot delete appointment request because it is within 24 hours.',
                         icon: 'error',
                         confirmationButtonText: 'Ok'
                     }).then(function() {
