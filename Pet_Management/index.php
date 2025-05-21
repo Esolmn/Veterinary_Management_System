@@ -16,7 +16,7 @@
             //display website
 ?>
 
-<div class="container-xxl p-4 shadow rounded mt-5" style="background-color: white;"> 
+<div class="container-xxl p-4 shadow-gradient rounded-4 mt-5" style="background-color: white;"> 
     <h1 class="text-center fw-bolder mb-3" style="color: orange;">Manage Pets</h1>
     <div class="mt-4 mb-4 d-flex justify-content-between">
         <a class="btn custom-purple-btn" href="create.php">Add Pet</a>

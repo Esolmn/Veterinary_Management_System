@@ -10,7 +10,7 @@
 </div>
 
 <div class="container-xxl d-flex justify-content-center align-items-center">
-    <div class="card shadow rounded-4 p-4" style="width: 700px;">
+    <div class="card shadow-gradient rounded-4 p-4" style="width: 700px;">
         <div class="card-title text-center">
             <h1>
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="orange" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -79,7 +79,7 @@
 
             <div class="row">
                 <div class="col-6">
-                    <button type="submit" class="btn btn-primary w-100 rounded-3 mt-3">Create Account</button>
+                    <button type="submit" class="btn custom-purple-btn w-100 rounded-3 mt-3">Create Account</button>
                 </div>
                 <div class="col-6">
                     <a href="index.php" class="btn btn-danger w-100 rounded-3 mt-3">Cancel</a>
