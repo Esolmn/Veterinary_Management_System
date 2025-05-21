@@ -57,7 +57,7 @@
             <div class="row gx-3 mb-4">
                 <div class="col-md-5">
                     <label for="birthdate" class="form-label">Birthdate</label>
-                    <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate" max="<?= date('Y-m-d')?>" required>
                 </div>
                 <div class="col-7 mb-3">
                     <label for="breed" class="form-label">Breed</label>
