@@ -65,7 +65,7 @@
                     <?php endif; ?>
                     <?php if(isset($_SESSION['role']) && ($_SESSION['role'] == 'superadmin' || $_SESSION['role'] == 'admin')) : ?>
                         <li class="nav-item"><a class="nav-link ms-4 <?= activeLink('/Veterinary_Management_System/Pet_Owner_Management/index.php') ?>" href="/Veterinary_Management_System/Pet_Owner_Management/index.php">Pet Owners</a></li>
-                        <li class="nav-item"><a class="nav-link ms-4 <?= activeLink('/Veterinary_Management_System/Pet_Management/index.php') ?>" href="/Veterinary_Management_System/Pet_Management/index.php">Manage Pets</a></li>
+                        <li class="nav-item"><a class="nav-link ms-4 <?= activeLink('/Veterinary_Management_System/Pet_Management/index.php') ?>" href="/Veterinary_Management_System/Pet_Management/index.php">Pets</a></li>
                         <li class="nav-item"><a class="nav-link ms-4 <?= activeLink('/Veterinary_Management_System/Treatment_Management/index.php') ?>" href="/Veterinary_Management_System/Treatment_Management/index.php">Treatments</a></li>
                         <li class="nav-item"><a class="nav-link ms-4 <?= activeLink('/Veterinary_Management_System/Treatment_Product/index.php') ?>" href="/Veterinary_Management_System/Treatment_Product/index.php">Products</a></li>
                         <li class="nav-item"><a class="nav-link ms-4 <?= activeLink('/Veterinary_Management_System/Available_Dates/index.php') ?>" href="/Veterinary_Management_System/Available_Dates/index.php">Available Dates</a></li>
