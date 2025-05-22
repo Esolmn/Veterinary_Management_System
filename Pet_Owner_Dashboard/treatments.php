@@ -21,7 +21,7 @@
         <p class="text-center fw-bold mt-2 fs-2 mb-4" style="color: orange;">Treatment Records</p>
         <div class="d-flex justify-content-between">
             <input type="text" id="customSearch" placeholder="Search Records..." class="form-control w-25 mb-3 ms-2 mb-4">
-            <a href="index.php" class="btn btn-danger rounded-3 mb-3 text-end">Back</a>
+            <a href="index.php" class="btn btn-danger rounded-3 mb-4 text-end">Back</a>
         </div>
         <div class="card shadow-gradient rounded-4 p-2">
             <div style="max-height: 400px; overflow-y: auto;">
