@@ -8,6 +8,13 @@
     $db = $database->getConnection();
 
     User::setConnection($db); 
+    $id = $_GET['id'];
+    $user = User::find($id);
+
+    if(!$user) {
+        header('Location: index.php');
+        exit();
+    }
 
     if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'superadmin') {
 
@@ -29,14 +36,6 @@
 
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        $id = $_GET['id'];
-        $user = User::find($id);
-
-        if(!$user) {
-            header('Location: index.php');
-            exit();
-        }
         
         $existingUser = User::authByEmail($_POST['email']);
 

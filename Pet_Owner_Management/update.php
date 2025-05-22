@@ -2,12 +2,19 @@
     require_once '../database/Database.php';
     require_once '../models/User.php';
 
-    session_start(); //di gumagana, nadidirect cya sa blank page
+    session_start();
 
     $database = new Database();
     $db = $database->getConnection();
 
     User::setConnection($db);
+    $id = $_GET['id'];
+    $user = User::find($id);
+
+    if(!$user) {
+        header('Location: index.php');
+        exit();
+    }
 
     if (!isset($_SESSION['role']) || ($_SESSION['role'] !== 'superadmin' && $_SESSION['role'] !== 'admin')) {
         include '../layout/header.php';
@@ -28,14 +35,6 @@
 <?php
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        $id = $_GET['id'];
-        $user = User::find($id);
-
-        if(!$user) {
-            header('Location: index.php');
-            exit();
-        }
 
         $existingUser = User::authByEmail($_POST['email']);
 
