@@ -166,7 +166,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <a type="button" class="btn btn-danger" name="sub" href="../Pet_Owner_Dashboard/appointments.php">Cancel</a>
-                            <button type="submit" class="btn btn-primary">Store</button>
+                            <button type="submit" class="btn custom-purple-btn">Store</button>
                         </div>
                     </div>
                     <?php else : ?>
