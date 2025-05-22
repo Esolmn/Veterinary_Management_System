@@ -80,13 +80,11 @@
             return $result ? array_map(fn($data) => new self($data), $result) : [];
         }
 
-        public static function whereOption($column, $operator, $value, $options) {
-            $result = parent::whereOption($column, $operator, $value, $options);
+        public static function doubleWhere($column1, $operator1, $value1, $column2, $operator2, $value2) {
+            $result = parent::doubleWhere($column1, $operator1, $value1, $column2, $operator2, $value2);
 
             return $result ? array_map(fn($data) => new self($data), $result) : [];
         }
-
-
 
         public static function hasAppointments($id) {
             $sql = "SELECT COUNT(*) FROM appointment_requests WHERE aptdate_id = :id";
