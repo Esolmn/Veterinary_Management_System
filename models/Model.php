@@ -181,29 +181,6 @@
             }
         }
 
-        protected static function whereOption($column, $operator, $value, $options) {
-            try {
-                $sql = "SELECT * FROM " . static::$table . " WHERE $column $operator :value";
-    
-                if (isset($options['order'])) {
-                    $sql .= " ORDER BY " . $options['order'];
-                }
-    
-                if (isset($options['limit'])) {
-                    $sql .= " LIMIT " . $options['limit'];
-                }
-    
-                $stmt = self::$conn->prepare($sql);
-                $stmt->bindValue(':value', $value);
-                $stmt->execute();
-    
-                return $stmt->fetchAll();
-    
-            } catch (PDOException $e) {
-                die("Fetch failed: " . $e->getMessage());
-            }
-        }
-
     }
 
 ?>
