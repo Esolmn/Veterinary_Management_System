@@ -10,7 +10,6 @@
     Appointment::setConnection($conn);
     AvailableDate::setConnection($conn);
     $apt_reqs = Appointment::all();
-    $available_dates = AvailableDate::all();
 
     User::setConnection($conn);
 
