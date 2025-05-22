@@ -99,7 +99,7 @@
             $userEmails = parent::where('email', '=', $check_email);
 
             if (!empty($userEmails)) {
-                return new self($userEmails[0]);//una lng irereturn kasi naka fetchall ang where
+                return new self($userEmails[0]);//una lng irereturn kasi naka fetch all ang where
             }
 
             return null;
