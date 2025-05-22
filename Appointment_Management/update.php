@@ -21,11 +21,19 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $apt->update([
-        'status' => $_POST['status'],
-        'declined_reason' => $_POST['declined_reason'] ?? null, // null if no declined reason
-        'updated_at' => date('Y-m-d H:i:s')
-        ]);
+        $data = [
+            'status' => $_POST['status'],
+            'declined_reason' => $_POST['declined_reason'] ?? null,
+            'updated_at' => date('Y-m-d H:i:s'),
+        ];
+
+        if ($_POST['status'] === 'Declined') {
+            $data['declined_by'] = $_SESSION['role'];
+        } else {
+            $data['declined_by'] = null;
+        }
+
+        $apt->update($data);
 
         include '../layout/header.php';
 

@@ -16,7 +16,7 @@
 
 <div class="container-xxl p-4 mt-3 d-flex justify-content-center">
     <div class="row g-4" style="min-height: 75%;">
-        <div class="col-md-4 d-flex h-75">
+        <div class="col-md-4 d-flex">
             <div class="card shadow-gradient rounded-4 p-4">
                 <div class="card-title text-center">
                     <h1>

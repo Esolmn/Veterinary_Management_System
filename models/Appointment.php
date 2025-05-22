@@ -13,6 +13,7 @@
         public $declined_reason;
         public $created_at;
         public $updated_at;
+        public $declined_by;
 
         public function __construct(array $data = []){
             foreach($data as $key => $value){

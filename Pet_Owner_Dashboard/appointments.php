@@ -49,6 +49,12 @@
                     <td class="text-center"><?= $appt->status ?>
                         <?php if($appt->status == 'Declined' && $appt->declined_reason != null) : ?>
                             <br><small class="text-danger fst-italic"><?= 'Reason: '.$appt->declined_reason ?></small>
+                            <?php if (!empty($appt->declined_by)) : ?>
+                                <br>
+                                <small class="text-muted fst-italic">
+                                    <?= 'Declined by: ' . ucfirst($appt->declined_by) ?>
+                                </small>
+                            <?php endif; ?>
                         <?php endif; ?>
                     </td>
                 </tr>
