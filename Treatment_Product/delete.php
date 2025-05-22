@@ -1,6 +1,6 @@
 <?php 
 
-    include  '../layout/header.php';
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/Product.php';
 
@@ -18,9 +18,11 @@
 <?php
 
     if(!$product){
-        header('Location: ../404error.php');
+        header('Location: index.php');
         exit();
     }
+
+    include  '../layout/header.php';
 
     $destroyproduct = $product->delete($id);
 

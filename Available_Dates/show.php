@@ -1,5 +1,5 @@
 <?php 
-    include '../layout/header.php'; 
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/Model.php';
     require_once '../models/AvailableDate.php';
@@ -20,6 +20,8 @@
         header('Location: index.php');
         exit();
     }
+
+    include '../layout/header.php';
 
     $appointments = $availableDate->approved_appointments();
 

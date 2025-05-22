@@ -29,7 +29,7 @@
     $newStatus = $_GET['status'];//kinukuha ung pinasang status sa URL
 
     if(!$user) {
-        header('Location: ../../index.php');
+        header('Location: index.php');
         exit();
     }
 

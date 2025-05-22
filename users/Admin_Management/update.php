@@ -2,7 +2,7 @@
     require_once '../../database/Database.php'; 
     require_once '../../models/User.php';
 
-    session_start();
+    session_start(); //same as sa update nung pet owners management
 
     $db = new Database();
     $conn = $db->getConnection();

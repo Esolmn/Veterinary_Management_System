@@ -1,5 +1,5 @@
 <?php 
-    include '../layout/header.php';
+    session_start();
     require_once '../database/Database.php';
     require_once '../models/Treatment.php';
 
@@ -15,6 +15,13 @@
 <?php
     $id = $_GET['id'];
     $treatment = Treatment::find($id);
+
+    if(!$treatment){
+        header('Location: index.php');
+        exit();
+    }
+
+    include  '../layout/header.php';
      
     if($treatment){
 
