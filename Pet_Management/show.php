@@ -108,13 +108,13 @@
                     <?php
                         $treatments = Treatment::where('pet_id', '=', $pet->id);
                         if(count($treatments)>0):
-                        foreach ($treatments as $treatment):
-                            $products = Product::where('treatment_id', '=', $treatment->id);
-                            $totalProductCost = 0;
-                            foreach ($products as $product) {
-                                $totalProductCost += $product->cost;
-                            }
-                            $totalCost = $totalProductCost + $treatment->doctor_fee;
+                            foreach ($treatments as $treatment):
+                                $products = Product::where('treatment_id', '=', $treatment->id);
+                                $totalProductCost = 0;
+                                foreach ($products as $product) {
+                                    $totalProductCost += $product->cost;
+                                }
+                                $totalCost = $totalProductCost + $treatment->doctor_fee;
                     ?>
                         <tr>
                             <td><?= $treatment->id ?></td>
@@ -139,55 +139,58 @@
  
     <div class="row gx-3 mt-4">
     <div class="col-12">
-        <?php
-        $treatments = Treatment::where('pet_id', '=', $pet->id);
-        if (count($treatments) > 0):
-    foreach ($treatments as $treatment):
-        $products = Product::where('treatment_id', '=', $treatment->id);
-                        $totalProductCost = 0;
-                        foreach ($products as $product) {
-                            $totalProductCost += $product->cost;
-                        }
-                        $totalCost = $totalProductCost + $treatment->doctor_fee;
-        ?> 
         <div class="card shadow rounded-4 p-4 mb-3">
             <h4 class="mb-4 text-center" style="color: orange; font-size: 30px">Products Used</h4>
-            <table class="table table-hover align-middle text-center">
-                <thead>
-                    <tr>
-                        <th>Treatment Name</th>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                        
-                     <?php 
-                     if(count($products)>0):
-                     foreach ($products as $product): 
-                     ?>
+            <div class="card shadow-gradient rounded-4 p-2">
+                <table class="table table-hover align-middle text-center">
+                    <thead>
                         <tr>
-                            <td><?= $treatment->treatment_name ?></td>
-                            <td><?= $product->product_name ?></td>
-                            <td><?= $product->quantity ?></td>
-                            <td>₱<?= number_format($product->cost, 2) ?></td>
+                            <th>Treatment Name</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Cost</th>
                         </tr>
-                    <?php endforeach; ?>
-                        <tr class="table-warning">
-                            <th colspan="3" class="text-start">&nbsp;&nbsp;Subtotal</th>
-                            <td><strong>₱<?= number_format($totalProductCost, 2) ?></strong></td>
-                        </tr>  
-                    <?php else: ?>
-                         <tr>
-                            <td colspan="4">No products used for this treatment.</td>
-                        </tr>
-                    <?php endif; ?>           
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $treatments = Treatment::where('pet_id', '=', $pet->id);
+                        $hasProducts = false;
+
+                        foreach ($treatments as $treatment) {
+                            $products = Product::where('treatment_id', '=', $treatment->id);
+                            $totalProductCost = 0;
+
+                            if (count($products) > 0) {
+                                $hasProducts = true;
+                                foreach ($products as $product) {
+                                    $totalProductCost += $product->cost;
+                                    ?>
+                                    <tr>
+                                        <td><?= $treatment->treatment_name ?></td>
+                                        <td><?= $product->product_name ?></td>
+                                        <td><?= $product->quantity ?></td>
+                                        <td>₱<?= number_format($product->cost, 2) ?></td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
+                                <tr class="table-warning">
+                                    <th colspan="3" class="text-start">&nbsp;&nbsp;Subtotal for <?= $treatment->treatment_name ?></th>
+                                    <td><strong>₱<?= number_format($totalProductCost, 2) ?></strong></td>
+                                </tr>
+                                <?php
+                            }
+                        }
+                        if (!$hasProducts):
+                            ?>
+                            <tr>
+                                <td colspan="4">No products used for this pet's treatments.</td>
+                            </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <?php endforeach; endif;?>     
-    </div>
     </div>
 </div>
     

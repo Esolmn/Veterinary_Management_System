@@ -19,7 +19,7 @@
             //display website
 ?>
 
-<div class="container-xxl p-4 rounded-5 mt-5">
+<div class="container-xxl p-4 rounded-5 mt-3">
     <div class="row gx-4 gy-4">
         <div class="col-md-4 d-flex justify-content-center">
             <div class="card w-100 shadow rounded-4 p-4 mb-4 mb-md-0">
@@ -67,7 +67,7 @@
                             <a href="../reports/treatments_indivreport.php?action=D&id=<?=$treatment->id?>" target="_blank" class="btn btn-warning w-100 h-100 d-flex align-items-center justify-content-center">Download</a>
                         </div>
                         <div class="col d-flex justify-content-end align-items-stretch">
-                            <a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-center" href="index.php">Back</a>
+                            <a class="btn btn-danger w-100 h-100 d-flex align-items-center justify-content-center" href="index.php">Back</a>
                         </div>
                     </div>
                 </div>

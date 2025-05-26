@@ -44,7 +44,7 @@
                     });
                 </script>";
         }
-        else { // if record is 24 hrs within appointment date
+        else { 
             echo "<script>
                     Swal.fire({
                         title: 'Error!',
@@ -57,7 +57,7 @@
                 </script>";
         }
     }
-    else { // if record is not found
+    else {
             echo "<script>
                     Swal.fire({
                         title: 'Error!',
