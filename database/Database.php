@@ -3,7 +3,7 @@
     class Database {
         private $localhost = "localhost";
         private $username = "root";
-        private $password = "Soliman28Jeds04";
+        private $password = ""; //your password
         private $database = "vet_db";
         private $conn;
 
