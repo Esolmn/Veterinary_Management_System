@@ -54,7 +54,9 @@
                             <label for="pet_id" class="form-label">Treatment Recipient</label>
                             <select id="pet_id" name="pet_id" class="form-select" required>
                                 <option value="" disabled selected>Select a Pet</option>
-                                <?php foreach($pets as $pet): ?>
+                                <?php foreach($pets as $pet): 
+                                        if($pet->status === 'inactive') continue;
+                                    ?>
                                     <option value="<?=$pet->id?>"><?=$pet->id?> - <?=$pet->name?></option>
                                 <?php endforeach; ?>
                             </select>

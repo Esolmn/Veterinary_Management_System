@@ -45,7 +45,8 @@
                 </div>
                 <div class="card shadow-gradient rounded-4 p-2 mt-3">
                     <div class="d-flex justify-content-between gap-3">
-                        <a class="btn custom-purple-btn w-50 rounded-3" href="../reports/pet_report.php?id=<?= $pet->id ?>">Generate PDF</a>
+                        <a class="btn btn-success w-50 rounded-3" href="../reports/pet_report.php?id=<?= $pet->id ?>">View</a>
+                        <a class="btn btn-warning w-50 rounded-3" href="../reports/pet_report.php?action=D&id=<?= $pet->id ?>">Download</a>
                         <a class="btn btn-danger w-50 rounded-3" href="index.php">Back</a>
                     </div>
                 </div>
@@ -106,7 +107,7 @@
                     </thead>
                     <tbody>
                     <?php
-                        $treatments = Treatment::where('pet_id', '=', $pet->id);
+                        $treatments = Treatment::where('pet_id', '=', $pet->id);//
                         if(count($treatments)>0):
                             foreach ($treatments as $treatment):
                                 $products = Product::where('treatment_id', '=', $treatment->id);

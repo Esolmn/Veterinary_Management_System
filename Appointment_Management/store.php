@@ -2,10 +2,12 @@
     session_start();
     require_once '../database/Database.php';
     require_once '../models/Appointment.php';
+    require_once '../models/Pet.php';
     
     $db = new Database();
     $conn = $db->getConnection();
     Appointment::setConnection($conn);
+
 
     if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST)) {
         header('Location: create.php');
@@ -14,6 +16,7 @@
 
     $services_temp = $_POST['services_needed'];
     $services = implode(", ", $services_temp);
+
 
     $apt = Appointment::create([
         'user_id' => $_POST['user_id'],

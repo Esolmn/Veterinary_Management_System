@@ -53,7 +53,9 @@
                     <label for="petName" class="form-label fw-bolder">Pet Name:</label>
                     <select name="pet_id" id="petName" class="form-control" form="appointmentForm" required>
                         <option selected="selected"></option>
-                        <?php foreach($pets as $pet) : ?>
+                        <?php foreach($pets as $pet) : 
+                                if($pet->status == 'inactive') continue;
+                            ?>
                             <option 
                                 value="<?= $pet->id ?>" 
                                 data-owner="<?= $pet->user_id ?>" 
@@ -166,7 +168,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <a type="button" class="btn btn-danger" name="sub" href="../Pet_Owner_Dashboard/appointments.php">Cancel</a>
-                            <button type="submit" class="btn custom-purple-btn">Store</button>
+                            <button type="submit" class="btn custom-purple-btn">Book Appointment</button>
                         </div>
                     </div>
                     <?php else : ?>

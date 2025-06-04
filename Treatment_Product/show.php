@@ -62,14 +62,8 @@
                 </div>
                  <div class="card-footer bg-white border-0 d-flex justify-content-center align-items-center gap-2 flex-wrap pt-3">
                     <div class="row align-items-stretch g-2">
-                        <div class="col d-flex justify-content-center align-items-stretch">
-                            <a href="../reports/products_indivreport.php?id=<?=$product->id?>" target="_blank" class="btn btn-success w-100 h-100 d-flex align-items-center justify-content-center">View</a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-stretch">
-                            <a href="../reports/products_indivreport.php?action=D&id=<?=$product->id?>" target="_blank" class="btn btn-warning w-100 h-100 d-flex align-items-center justify-content-center">Download</a>
-                        </div>
                         <div class="col d-flex justify-content-end align-items-stretch">
-                            <a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-center" href="index.php">Back</a>
+                            <a class="btn btn-danger w-100 h-100 d-flex align-items-center justify-content-center" href="index.php">Back</a>
                         </div>
                     </div>
                 </div>

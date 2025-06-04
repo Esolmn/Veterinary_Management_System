@@ -53,7 +53,7 @@
         'status' => $_POST['status'],
         'updated_at' => date('Y-m-d H:i:s')
     ];
-
+    
     $updatePet = $pet->update($data);
 
     include '../layout/header.php';

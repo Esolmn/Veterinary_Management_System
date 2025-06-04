@@ -47,8 +47,8 @@ $pdf->Cell(0, 10, 'Listed Pets', 'B', 0, 'C');
 $pdf->Ln(20);
 
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(35, 10, 'Pet Name', 1, 0, 'C');  
-$pdf->Cell(30, 10, 'Breed', 1, 0, 'C');
+$pdf->Cell(45, 10, 'Pet Name', 1, 0, 'C');  
+$pdf->Cell(40, 10, 'Breed', 1, 0, 'C');
 $pdf->Cell(35, 10, 'Species', 1, 0, 'C');
 $pdf->Cell(20, 10, 'Gender', 1, 0, 'C');
 $pdf->Cell(30, 10, 'Birthdate', 1, 0, 'C');
@@ -61,13 +61,13 @@ $pdf->SetFont('Arial','', 10);
 if(count($pets) > 0) {
 
     foreach ($pets as $pet) {
-        $pdf->Cell(35, 10, $pet->name, 1, 0, 'C');
-        $pdf->Cell(30, 10, $pet->breed, 1, 0, 'C');
+        $pdf->Cell(45, 10, $pet->name, 1, 0, 'C');
+        $pdf->Cell(40, 10, $pet->breed, 1, 0, 'C');
         $pdf->Cell(35, 10, $pet->specie, 1, 0, 'C');
         $pdf->Cell(20, 10, $pet->gender, 1, 0, 'C');
         $pdf->Cell(30, 10, $pet->birthdate, 1, 0, 'C');
         $pdf->Cell(20, 10, $pet->status, 1, 1, 'C');
-        $pdf->Ln();
+        //$pdf->Ln();
     }
 }
 else{
